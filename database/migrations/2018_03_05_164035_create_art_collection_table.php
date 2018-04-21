@@ -15,6 +15,8 @@ class CreateArtCollectionTable extends Migration
     {
         Schema::create('art_collection', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('art_id');
+            $table->integer('collection_id');
             $table->timestamps();
         });
     }

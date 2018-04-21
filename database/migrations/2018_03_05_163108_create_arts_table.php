@@ -17,11 +17,11 @@ class CreateArtsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('medium');
-            $table->string('department_id');
-            $table->string('user_id');
-            $table->string('dimension');
-            $table->string('priority');
-            $table->string('frame');
+            $table->integer('department_id');
+            $table->integer('user_id');
+            $table->string('dimension')->nullable();
+            $table->integer('priority')->default(0);
+            $table->string('frame')->nullable();
             $table->timestamps();
         });
     }
