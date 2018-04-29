@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
 
     	$faker = Factory::create();
-    	/*
+    	
     	foreach ($this->departments as $key => $department) {
     		Department::create([
     			'name' => $department
@@ -44,8 +44,8 @@ class DatabaseSeeder extends Seeder
     			'name' => $collection
     		]);
     	}
-    	*/
-    	/*
+    	
+    	
     	for ($i=0; $i < 40; $i++) {
     		User::create([
     			'name' 	=>	$faker->name,
@@ -53,7 +53,7 @@ class DatabaseSeeder extends Seeder
     			'password' 	=>	bcrypt('123456'),
     		]);
     	} 
-    	*/
+    	
     	
     	foreach ($this->departments as $key => $department) {
     		//echo ($key + 1) . PHP_EOL;
@@ -62,12 +62,12 @@ class DatabaseSeeder extends Seeder
     			echo $faker->name . PHP_EOL;
 
     			Art::create([
-    				'name'	=> $faker->sentence(2),
-    				'img'	=> $filenames[$i],
-    				'medium'	=> 'canvas',
+    				'name'			=> $faker->sentence(2),
+    				'img'			=> $this->filenames[$i],
+    				'medium'		=> 'canvas',
     				'department_id'	=> $key + 1,
-    				'user_id'	=> $this->userIndex,
-    				'dimension'	=> '18.0 x 24.0',
+    				'user_id'		=> $this->userIndex,
+    				'dimension'		=> '18.0 x 24.0',
 				]);
  				
  				$this->userIndex ++;
