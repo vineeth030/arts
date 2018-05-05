@@ -11,6 +11,12 @@
 |
 */
 
+// for admin dashboard
+########### 
+// https://scotch.io/tutorials/simple-laravel-crud-with-resource-controllers 
+############
+
+
 /* Home page*/
 Route::get('/arts/all', function(){
 	dd(\App\Art::all());
@@ -28,7 +34,11 @@ Route::get('/arts/{department}/{art}', function( $art ){
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/art', function () {
+    return view('art');
 });
 
 Auth::routes();

@@ -12,60 +12,75 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" rel="stylesheet" type="text/css">
+    <link href="css/default.css" rel="stylesheet" type="text/css">
+    <link href="css/component.css" rel="stylesheet" type="text/css">
+    <link href="css/perfect-scrollbar.css" rel="stylesheet" type="text/css">
+    <link href="css/fontawesome-all.css" rel="stylesheet" type="text/css">
+    <script src="js/modernizr.custom.js"></script>
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a class="nav-link" href="{{ route('login') }}">Login</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        Logout
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="img/archive_logo_white.png" /></a>
     </div>
 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <!--<li><a href="#">Link</a></li>-->
+      </ul>
+    </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </nav>
+
+    @yield('content')
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/imagesloaded.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/AnimOnScroll.js"></script>
+    <script src="js/perfect-scrollbar.js"></script>
+
+    <!--<script type="text/javascript">
+        $(document).ready(function(){
+        $('.banner-section').css('height', $(window).height());
+    });
+    $(window).resize(function(){
+        $('.banner-section').css('height', $(window).height());
+    });
+    </script>-->
+
+    <script>
+        new AnimOnScroll( document.getElementById( 'grid' ), {
+            minDuration : 0.4,
+            maxDuration : 0.7,
+            viewportFactor : 0.2
+        } );
+    </script>
+
+    <script>
+    $('.scroll-down').click(function()
+    {
+    $('html, body').animate({ scrollTop: $('#masonary-section').offset().top}, 2000);           
+    });    
+    </script>
+
+    <script>
+        var ps = new PerfectScrollbar('.masonary-wrap');
+    </script>
 </body>
 </html>
