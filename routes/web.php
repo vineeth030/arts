@@ -18,30 +18,26 @@
 
 
 /* Home page*/
-Route::get('/arts/all', function(){
-	dd(\App\Art::all());
-});//->name('arts.home');
+
 Route::get('/arts/{department}', function( $department ){
-	dd(\App\Art::where('department_id', $department)->get());
+	return view('art', 
+	[
+		'art' => App\Art::where('department_id', $department)->first(),
+		'related_arts' => \App\Art::where('department_id', $department )->get()
+	]);
 })->name('arts.department');
 
-Route::get('/arts/{department}/{art}', function( $art ){
-	dd(\App\Art::find($art));
+Route::get('/arts/{department}/{art}', function($department, \App\Art $art ){
+    return view('art', 
+    	[
+    		'art' => $art,
+    		'related_arts' => \App\Art::where('department_id', $art->department_id )->get()
+    	]);
 })->name('arts.art');
 
-
-
-
-
 Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/art', function () {
-    return view('art');
+    return view('home', ['arts' => \App\Art::all()]);
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-//Route::get('/arts', 'ArtsController@index')->name('home');

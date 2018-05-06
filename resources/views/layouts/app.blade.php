@@ -13,13 +13,13 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/custom.css" rel="stylesheet" type="text/css">
-    <link href="css/default.css" rel="stylesheet" type="text/css">
-    <link href="css/component.css" rel="stylesheet" type="text/css">
-    <link href="css/perfect-scrollbar.css" rel="stylesheet" type="text/css">
-    <link href="css/fontawesome-all.css" rel="stylesheet" type="text/css">
-    <script src="js/modernizr.custom.js"></script>
+    <link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url('css/custom.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url('css/default.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url('css/component.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url('css/perfect-scrollbar.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url('css/fontawesome-all.css') }}" rel="stylesheet" type="text/css">
+    <script src="{{ url('js/modernizr.custom.js') }}"></script>
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -32,7 +32,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img src="img/archive_logo_white.png" /></a>
+      <a class="navbar-brand" href="#"><img src="{{ url('img/archive_logo_white.png') }}" /></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -47,13 +47,13 @@
     @yield('content')
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/imagesloaded.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/AnimOnScroll.js"></script>
-    <script src="js/perfect-scrollbar.js"></script>
+    <script src="{{ url('js/jquery-2.1.3.min.js') }}"></script>
+    <script src="{{ url('js/bootstrap.min.js') }}"></script>
+    <script src="{{ url('js/masonry.pkgd.min.js') }}"></script>
+    <script src="{{ url('js/imagesloaded.js') }}"></script>
+    <script src="{{ url('js/classie.js') }}"></script>
+    <script src="{{ url('js/AnimOnScroll.js') }}"></script>
+    <script src="{{ url('js/perfect-scrollbar.js') }}"></script>
 
     <!--<script type="text/javascript">
         $(document).ready(function(){
