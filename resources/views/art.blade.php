@@ -36,7 +36,7 @@
                 <ul class="grid effect-2" id="grid">
                     @foreach($related_arts as $art)
                         <li>
-                            <a href="/arts/ {{ $art->department_id }} / {{ $art->id }} ">
+                            <a href="/arts/{{ $art->department_id }}/{{ $art->id }}">
                                 <img src="/img/{{ $art->department_id }}/{{ $art->img }}">
                             </a>
                         </li>                  
