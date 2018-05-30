@@ -15,19 +15,29 @@
 
 
     <section class="inner-wrapper">
+        <div class="fa-tabs-main">
+            <ul>
+                <li><a href="{{ route('arts.department', ['department_id' => 1]) }}"> Painting </a></li>
+                <li><a href="{{ route('arts.department', ['department_id' => 2]) }}"> Applied Art </a></li>
+                <li><a href="{{ route('arts.department', ['department_id' => 3]) }}"> Sculpture </a></li>
+                <li><a href="{{ route('arts.department', ['department_id' => 4]) }}"> Others </a></li>
+            </ul>    
+        </div><!--fa-tabs-main-->
         <ol class="breadcrumb">
             <li><a href="/">Home</a></li>
             <li><a href="{{ route('arts.department', ['department' => $art->department_id ]) }}"> {{ ucfirst($art->departmentName->name) }}</a></li>
             <li class="active"> {{ $art->name }} </li>
         </ol>
 
+
         <div class="main-left col-md-8">
         <div class="image-main"><img src="/img/{{ $art->department_id }}/{{ $art->img }}" /></div>
-        <div class="art-by"><i class="fas fa-user"></i> Vineeth Karbala</div>
+        <!--<div class="art-by"><i class="fas fa-user"></i> Vineeth Karbala</div>-->
         <div class="image-details">
             <div class="image-name"> {{ $art->name }} </div>
             <div class="image-medium"> {{ $art->medium }} </div>
-            <div class="image-size"> {{ $art->dimension }} </div>    
+            <div class="image-size"> {{ $art->dimension }} </div> 
+            <div class="art-by"><i class="fas fa-user"></i> {{ ucwords($art->createdBy->name) }} </div>   
         </div><!--image-details-->
         </div>
         

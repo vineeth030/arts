@@ -31,7 +31,7 @@ Route::get('/arts/{department}/{art}', function($department, \App\Art $art ){
     return view('art', 
     	[
     		'art' => $art,
-    		'related_arts' => \App\Art::where('department_id', $art->department_id )->get()
+    		'related_arts' => \App\Art::where('department_id', $art->department_id )->orderBy('id')->get()
     	]);
 })->name('arts.art');
 

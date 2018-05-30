@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!--<link href="{{ asset('css/app.css') }}" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
     <link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ url('css/custom.css') }}" rel="stylesheet" type="text/css">
@@ -38,7 +38,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <!--<li><a href="#">Link</a></li>-->
+        <li><a href="#">About</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

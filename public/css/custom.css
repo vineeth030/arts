@@ -26,24 +26,24 @@ body{
 .navbar-brand>img {
     width: 120px;
 }
-.masonary-section .fa-tabs-main{
+.fa-tabs-main{
     width: 100%;
     float: left;
     padding: 20px 0;
 }
-.masonary-section .fa-tabs-main ul{
+.fa-tabs-main ul{
     margin: 0 auto;
     padding: 0;
     width: 555px;
 }
-.masonary-section .fa-tabs-main ul li{
+.fa-tabs-main ul li{
     list-style: none;
     float: left;
     border: solid 1px #d4d4d4;
     border-radius: 3px;
     margin: 0 10px;
 }
-.masonary-section .fa-tabs-main ul li a{
+.fa-tabs-main ul li a{
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
@@ -51,14 +51,14 @@ body{
     padding: 10px 20px;
     display: block;
 }
-.masonary-section .fa-tabs-main ul li:hover{
+.fa-tabs-main ul li:hover{
     border: solid 1px #f0373d;
     background: #f0373d;
     -webkit-transition: all .6s;
     -moz-transition: all .6s;
     transition: all .6s;
 }
-.masonary-section .fa-tabs-main ul li:hover a{
+.fa-tabs-main ul li:hover a{
     color: #fff;
 }
 .banner-section a.scroll-down {
@@ -174,11 +174,14 @@ body{
 
 .inner-wrapper{
     height: 100vh;
-    padding: 60px 0 50px 20px;
+    padding: 10px 0 120px 20px;
 }
 .main-left{
     height: 100%;
     padding-left: 0;
+}
+.main-left .image-main{
+  background: whitesmoke;
 }
 .image-main img{
     /*width: 100%;
@@ -187,6 +190,8 @@ body{
     display: block;
     margin: 0 auto;
     max-width: 100%;
+    max-height: 75vh;
+    min-height: 75vh;
 }
 .related-masonary{
     height: 100%;
@@ -225,14 +230,12 @@ body{
     font-size: 14px;
 }
 .art-by{
-    position: absolute;
-    bottom: 0;
-    right: 0;
     color: #000;
     font-size: 14px;
     font-weight: 500;
     background: rgba(255, 255, 255, 0.8);
-    padding: 5px 10px; 
+    padding: 0 15px 0 0;
+    float: right;
 }
 .art-by i{
     margin-right: 5px; 
@@ -242,6 +245,7 @@ body{
     width: 100%;
     position: absolute;
     bottom: 0;
+    padding: 0 0 15px 0;
 }
 .image-name, .image-medium, .image-size{
     float: left;
@@ -255,6 +259,21 @@ body{
 .image-size{
     padding-right: 0;
     border-right: none;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: #fff;
+}
+.navbar-brand {
+    padding: 30px 30px;
+}
+.navbar-nav > li > a {
+    padding-top: 30px;
+}
+.navbar-right {
+    margin-right: 0px;
 }
 
 
