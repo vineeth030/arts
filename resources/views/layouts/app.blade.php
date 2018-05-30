@@ -20,6 +20,8 @@
     <link href="{{ url('css/perfect-scrollbar.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ url('css/fontawesome-all.css') }}" rel="stylesheet" type="text/css">
     <script src="{{ url('js/modernizr.custom.js') }}"></script>
+    <link href="{{ url('css/jquery.zbox.css') }}" rel="stylesheet" type="text/css">
+
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -56,6 +58,7 @@
     <script src="{{ url('js/classie.js') }}"></script>
     <script src="{{ url('js/AnimOnScroll.js') }}"></script>
     <script src="{{ url('js/perfect-scrollbar.js') }}"></script>
+    <script src="{{ url('js/jquery.zbox.min.js') }}"></script>
 
     <!--<script type="text/javascript">
         $(document).ready(function(){
@@ -65,6 +68,12 @@
         $('.banner-section').css('height', $(window).height());
     });
     </script>-->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".zb").zbox( { margin:20 } );
+      });
+      
+    </script>
 
     <script>
         new AnimOnScroll( document.getElementById( 'grid' ), {
@@ -80,9 +89,9 @@
     $('html, body').animate({ scrollTop: $('#masonary-section').offset().top}, 2000);           
     });    
     </script>
-
+   <!--
     <script>
         var ps = new PerfectScrollbar('.masonary-wrap');
-    </script>
+    </script>-->
 </body>
 </html>

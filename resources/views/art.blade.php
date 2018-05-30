@@ -31,7 +31,7 @@
 
 
         <div class="main-left col-md-8">
-        <div class="image-main"><img src="/img/{{ $art->department_id }}/{{ $art->img }}" /></div>
+        <div class="image-main"><a class="zb" href="/img/{{ $art->department_id }}/{{ $art->img }}"><img src="/img/{{ $art->department_id }}/{{ $art->img }}" /></a></div>
         <!--<div class="art-by"><i class="fas fa-user"></i> Vineeth Karbala</div>-->
         <div class="image-details">
             <div class="image-name"> {{ $art->name }} </div>
