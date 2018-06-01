@@ -2,6 +2,8 @@
 
 @section('content')
     <section class="banner-section">
+        <p class="hero-heading">FINE ARTS ARCHIVE</p>
+        <p class="hero-sub-heading">Govt. College of Fine Arts Thrissur</p>
         <a href="#masonary-section" class="scroll-down"><span></span></a>
     </section>
     
