@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('nav')
+@endsection
+
 @section('content')
     <!--
     <div class="masonary-section" id="masonary-section" style="height: auto;">
