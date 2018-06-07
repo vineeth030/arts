@@ -49,7 +49,7 @@ Route::post('/adminasd/arts/{art}/edit', function(Illuminate\Http\Request $reque
 })->name('arts.edit.post');
 
 Route::get('/', function () {
-    return view('home', ['arts' => \App\Art::all()]);
+    return view('home', ['arts' => \App\Art::inRandomOrder()->take(20)->get()]);
 });
 
 Route::get('/about', function () {
