@@ -52,5 +52,9 @@ Route::get('/', function () {
     return view('home', ['arts' => \App\Art::all()]);
 });
 
+Route::get('/about', function () {
+    return view('about');
+});
+
 Auth::routes();
 
