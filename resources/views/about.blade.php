@@ -19,7 +19,7 @@
                 <ul class="nav navbar-nav navbar-right">
                   <li><a href="/about">About</a></li>
                   <!--<li><a href="#">Team</a></li>-->
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="/contact">Contact</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

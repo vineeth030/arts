@@ -4,19 +4,6 @@
 @endsection
 
 @section('content')
-    <!--
-    <div class="masonary-section" id="masonary-section" style="height: auto;">
-        <div class="fa-tabs-main">
-            <ul>
-                <li><a href="{{ route('arts.department', ['department_id' => 1]) }}"> Painting </a></li>
-                <li><a href="{{ route('arts.department', ['department_id' => 2]) }}"> Applied Art </a></li>
-                <li><a href="{{ route('arts.department', ['department_id' => 3]) }}"> Sculpture </a></li>
-                <li><a href="{{ route('arts.department', ['department_id' => 4]) }}"> Others </a></li>
-            </ul>    
-        </div>
-    </div>-->
-
-
     <section class="inner-wrapper">
         <div class="fa-tabs-main">
             <ul>
