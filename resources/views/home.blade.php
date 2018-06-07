@@ -39,7 +39,8 @@
                 <li><a href="{{ route('arts.department', ['department_id' => 1]) }}"> Painting </a></li>
                 <li><a href="{{ route('arts.department', ['department_id' => 2]) }}"> Applied Art </a></li>
                 <li><a href="{{ route('arts.department', ['department_id' => 3]) }}"> Sculpture </a></li>
-                <li><a href="{{ route('arts.department', ['department_id' => 4]) }}"> Others </a></li>
+                <!--<li><a href="{{ route('arts.department', ['department_id' => 4]) }}"> Others </a></li>-->
+                <li><a disabled href="#"> Others </a></li>
             </ul>    
         </div><!--fa-tabs-main-->
         
