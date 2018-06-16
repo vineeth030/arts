@@ -15,10 +15,6 @@
 ########### 
 // https://scotch.io/tutorials/simple-laravel-crud-with-resource-controllers 
 ############
-
-
-/* Home page*/
-
 Route::get('/arts/{department}', function( $department ){
 	return view('art', 
 	[
@@ -43,22 +39,14 @@ Route::get('/adminasd/arts/{art}/edit', function(\App\Art $art ){
 })->name('arts.edit');
 
 Route::post('/adminasd/arts/{art}/edit', function(Illuminate\Http\Request $request, \App\Art $art){
-    //dd($request->all());
     $art->update($request->except('_token'));
-
 })->name('arts.edit.post');
 
 Route::get('/', function () {
     return view('home', ['arts' => \App\Art::inRandomOrder()->take(20)->get()]);
 });
 
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
-
+Route::view('/about', 'about');
+Route::view('/contact', 'contact');
 Auth::routes();
 
