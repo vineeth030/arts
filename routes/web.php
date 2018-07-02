@@ -46,6 +46,7 @@ Route::get('/', function () {
     return view('home', ['arts' => \App\Art::inRandomOrder()->take(20)->get()]);
 });
 
+Route::view('/welcome', 'welcome');
 Route::view('/about', 'about');
 Route::view('/contact', 'contact');
 Auth::routes();
