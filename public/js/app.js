@@ -36355,20 +36355,22 @@ var Main = function (_Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            fetch('http://fineartsarchives.com/api/arts').then(function (repsonse) {
-                return repsonse.json();
+            fetch('http://localhost:8000/api/arts').then(function (response) {
+                return response.json();
             }).then(function (arts) {
+                //var data = Array.from(arts);
+                console.log(arts);
                 _this2.setState({ arts: arts });
             });
         }
     }, {
-        key: 'renderProducts',
-        value: function renderProducts() {
+        key: 'renderArts',
+        value: function renderArts() {
             return this.state.arts.map(function (art) {
                 return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'li',
                     { key: art.id },
-                    art.title
+                    art.name
                 );
             });
         }
@@ -36381,7 +36383,7 @@ var Main = function (_Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'ul',
                     null,
-                    this.renderProducts()
+                    this.renderArts()
                 )
             );
         }
@@ -36391,7 +36393,6 @@ var Main = function (_Component) {
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Main);
-
 
 if (document.getElementById('root')) {
     __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Main, null), document.getElementById('root'));

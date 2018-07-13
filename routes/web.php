@@ -15,7 +15,7 @@
 ########### 
 // https://scotch.io/tutorials/simple-laravel-crud-with-resource-controllers 
 ############
-Route::get('/arts/{department}', function( $department ){
+Route::get('/arts/{department}', ['middleware' => 'cors'], function( $department ){
 	return view('art', 
 	[
 		'art' => App\Art::where('department_id', $department)->first(),

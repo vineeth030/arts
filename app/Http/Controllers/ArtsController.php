@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class ArtsController extends Controller
 {
+    function __construct()
+    {
+        //$this->middleware(['cors']);
+    }
     /**
      * Display a listing of the resource.
      *

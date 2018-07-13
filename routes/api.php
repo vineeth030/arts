@@ -17,8 +17,9 @@ Route::get('/test', function(){
 });
 // List of all arts
 Route::get('/arts', function () {
-    return response()->json(['arts' => \App\Art::inRandomOrder()->take(20)->get()]);
-});
+    return response(\App\Art::inRandomOrder()->take(20)->get(), 200);
+    //return response(['Product 1', 'Product 2', 'Product 3'],200);
+});//->middleware('cors');
 
 // List of all arts under a department
 Route::get('/departments/{department}/arts', function( $department ){
